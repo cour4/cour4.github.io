@@ -14,7 +14,10 @@
 
   <script src="app.js" defer></script>
   <script src="https://api.countapi.xyz/hit/florin-pop.com/visits?callback=liveViews" async></script>
-
+  <script> function liveViews(response) {
+    document.getElementById('visits').innerText = response.value;
+  }
+  </script>
 
 </head>
 
@@ -33,8 +36,7 @@
   <div class="mm">
    <p class="dd"> Donate our team :) </p>
   </div></a>
-
+  <h1 class="z1">Visits: <span id="visits"></span></h1>
 </div>
-<h1>Visits: <span id="visits"></span></h1>
 </body>
 </html>
